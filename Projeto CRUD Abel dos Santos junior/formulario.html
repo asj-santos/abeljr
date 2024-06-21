@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+
+    <head>
+        <!-- Metadados -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="./styles/formulario.css" media="screen">
+
+        <!-- Título da página (aparece na aba) -->
+        <title>Cadastro</title>
+    </head>
+
+    <body>  
+
+        <!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo") -->
+        <div>
+            <h1 id="titulo">Cadastro de Filmes</h1>
+            <p id="subtitulo">Complete os campos com as informações do filme</p>
+            <br>
+        </div>
+
+        <!-- Início do formulário -->
+        <form method="POST" action="cadastra_filme.php">
+
+            <fieldset class="grupo">
+                <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
+                <div class="campo">
+                    <label for="nome"><strong>Nome do filme</strong></label>
+                    <input type="text" name="nome" id="nome" required>
+                </div>
+            </fieldset>
+
+            <!-- Campo de desenvolvimento web com 3 opções de botões selecionáveis (radio button) e css de classe "campo" -->
+            <div class="campo">
+                <label><strong>Avaliação:</strong></label>
+                <label>
+                    <input type="radio" name="nota" value="1" checked>Nota: 1
+                </label>
+                <label>
+                    <input type="radio" name="nota" value="2">Nota: 2
+                </label>
+                <label>
+                    <input type="radio" name="nota" value="3">Nota: 3
+                </label>
+                <label>
+                    <input type="radio" name="nota" value="4">Nota: 4
+                </label>
+                <label>
+                    <input type="radio" name="nota" value="5">Nota: 5
+                </label>
+                
+            </div>
+
+            <!-- Campo de senioridade com 3 opções para escolha (select option) e css de classe "campo" -->
+            <div class="campo">
+                <label for="genero"><strong>Gênero</strong></label>
+                <select id="genero" name="genero" required>
+                    <option selected disabled value="">Selecione</option>
+                    <option value="Ação">Ação</option>
+                    <option value="Comédia">Comédia</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Fantasia">Fantasia</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Ficção Científica">Ficção Científica</option>
+                </select>
+            </div>
+
+            <fieldset class="grupo">
+                <!-- Campo de tecnologias para escolha de 1 ou mais opções para marcar (checkbox) e css de classe "campo" -->
+                <div id="check">
+                    <label><strong>Selecione os idiomas disponíveis:</strong></label><br><br>
+                    <input type="checkbox" id="idioma1" name="idioma[]" value="Português">
+                    <label for="idioma1"> Português</label>
+                    
+                    <input type="checkbox" id="idioma2" name="idioma[]" value="Inglês">
+                    <label for="idioma2"> Inglês</label>
+                    <input type="checkbox" id="idioma3" name="idioma[]" value="Espanhol">
+                    <label for="idioma3"> Espanhol</label>
+                    
+                    
+                </div>
+            </fieldset>
+
+            <!-- Caixa de texto -->
+            <div class="campo">
+                <br>
+                <label for="sinopse"><strong>Sinopse do filme: </strong></label>
+                <textarea rows="6" style="width: 26em" id="sinopse" name="sinopse" required></textarea>
+            </div>
+
+            <!-- Botão para enviar o formulário -->
+            <button class="botao" type="submit" onsubmit="">Concluído</button>            
+
+        </form>
+
+    </body>
+
+</html>
+
+
+
+
